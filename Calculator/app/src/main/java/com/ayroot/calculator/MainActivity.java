@@ -39,6 +39,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-        mSelectText.setText("ничего");
+        mSelectText.setText("0");
     }
 }

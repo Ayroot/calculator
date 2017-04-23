@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="div">/</string>
+    <string name="sub">-</string>
+    <string name="sum">+</string>
+    <string name="mlp">*</string>
+    <string name="result">=</string>
 </resources>
