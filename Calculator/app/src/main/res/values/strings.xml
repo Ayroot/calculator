@@ -5,4 +5,5 @@
     <string name="sum">+</string>
     <string name="mlp">*</string>
     <string name="result">=</string>
+    <string name="clean">C</string>
 </resources>

@@ -16,18 +16,18 @@ public class DataAdapter extends ArrayAdapter<String> {
             "1","2","3","4","5","6","7","8","9","0"
     };
 
-    Context mContext;
+    Context Context;
 
     public DataAdapter(Context context, int textViewResourceId) {
         super(context, textViewResourceId, number);
-        this.mContext = context;
+        this.Context = context;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         TextView label = (TextView) convertView;
         if (convertView==null) {
-            convertView = new TextView(mContext);
+            convertView = new TextView(Context);
             label = (TextView) convertView;
         }
         label.setText(number[position]);

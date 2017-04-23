@@ -7,7 +7,7 @@
     android:orientation="vertical">
     <TextView
         android:id="@+id/info"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="textEnd"
         android:gravity="end"
@@ -30,13 +30,22 @@
             android:id="@+id/operation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:columnCount="1">
-            <Button android:text="@string/sum" />
-            <Button android:text="@string/sub" />
-            <Button android:text="@string/mlp" />
-            <Button android:text="@string/div" />
-            <Button android:text="@string/result" />
+            android:layout_weight="0.85"
+            android:columnCount="2">
+            <Button android:text="@string/result"
+                android:tag="="
+                android:id="@+id/res"
+                />
+            <Button android:text="@string/clean"
+                android:tag="C"/>
+            <Button android:text="@string/sum"
+                android:tag="+"/>
+            <Button android:text="@string/sub"
+                android:tag="-"/>
+            <Button android:text="@string/mlp"
+                android:tag="*"/>
+            <Button android:text="@string/div"
+                android:tag="/"/>
         </GridLayout>
     </LinearLayout>
 </RelativeLayout>
