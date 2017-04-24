@@ -6,45 +6,127 @@
     tools:context="com.ayroot.calculator.MainActivity"
     android:orientation="vertical">
     <TextView
-        android:id="@+id/info"
+        android:id="@+id/p1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:gravity="end"
+        android:textSize="30sp"
+        android:text="Поле1" />
+    <TextView
+        android:layout_below="@+id/p1"
+        android:id="@+id/p2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="textEnd"
         android:gravity="end"
         android:textSize="60sp"
-        android:text="Поле" />
+        android:text="Поле2" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/info">
-        <GridView
+        android:layout_below="@+id/p2"
+        android:weightSum="1">
+       <!-- <GridView
             android:id="@+id/gridView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:numColumns="3">
-        </GridView>
+        </GridView> -->
+        <GridLayout
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:columnCount="3">
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/one"
+                android:tag="1"
+                android:id="@+id/one"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/two"
+                android:tag="2"
+                android:id="@+id/two"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/three"
+                android:tag="3"
+                android:id="@+id/three"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/four"
+                android:tag="4"
+                android:id="@+id/four"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/five"
+                android:tag="5"
+                android:id="@+id/five"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/six"
+                android:tag="6"
+                android:id="@+id/six"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/seven"
+                android:tag="7"
+                android:id="@+id/seven"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/eight"
+                android:tag="8"
+                android:id="@+id/eight"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/nine"
+                android:tag="9"
+                android:id="@+id/nine"/>
+            <Button
+                android:layout_width="75dp"
+                android:text="@string/nul"
+                android:tag="0"
+                android:id="@+id/nul"/>
+        </GridLayout>
         <GridLayout
             android:id="@+id/operation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.85"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:columnCount="2">
-            <Button android:text="@string/result"
-                android:tag="="
+            <!--android:layout_weight="0.85"-->
+            <Button
                 android:id="@+id/res"
-                />
-            <Button android:text="@string/clean"
-                android:tag="C"/>
-            <Button android:text="@string/sum"
+                android:layout_width="75dp"
+                android:text="@string/result"
+                android:tag="=" />
+            <Button
+                android:id="@+id/clean"
+                android:layout_width="75dp"
+                android:text="@string/C"
+                android:tag="C" />
+            <Button
+                android:id="@+id/sum"
+                android:layout_width="75dp"
+                android:text="@string/sum"
                 android:tag="+"/>
-            <Button android:text="@string/sub"
+            <Button
+                android:id="@+id/sub"
+                android:layout_width="75dp"
+                android:text="@string/sub"
                 android:tag="-"/>
-            <Button android:text="@string/mlp"
+            <Button
+                android:id="@+id/mlp"
+                android:layout_width="75dp"
+                android:text="@string/mlp"
                 android:tag="*"/>
-            <Button android:text="@string/div"
+            <Button
+                android:id="@+id/div"
+                android:layout_width="75dp"
+                android:text="@string/div"
                 android:tag="/"/>
         </GridLayout>
     </LinearLayout>
