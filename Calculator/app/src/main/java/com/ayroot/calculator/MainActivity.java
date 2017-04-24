@@ -9,7 +9,9 @@ import android.widget.GridLayout;
 import android.widget.TextView;
 import android.os.Bundle;
 
-import static com.ayroot.calculator.R.id.div;
+import static com.ayroot.calculator.R.id.operation;
+
+/*import static com.ayroot.calculator.R.id.div;
 import static com.ayroot.calculator.R.id.mlp;
 import static com.ayroot.calculator.R.id.num;
 import static com.ayroot.calculator.R.id.operation;
@@ -19,7 +21,7 @@ import static com.ayroot.calculator.R.id.res;
 import static com.ayroot.calculator.R.id.sub;
 import static com.ayroot.calculator.R.string.C;
 import static com.ayroot.calculator.R.string.result;
-import static com.ayroot.calculator.R.string.sum;
+import static com.ayroot.calculator.R.string.sum;*/
 
 public class MainActivity extends AppCompatActivity //implements AdapterView.OnItemSelectedListener
 {
@@ -50,8 +52,10 @@ public class MainActivity extends AppCompatActivity //implements AdapterView.OnI
         GridLayout operation = (GridLayout) findViewById(R.id.operation);
         for (int i = 0; i < operation.getChildCount(); i++){
             View view1 = operation.getChildAt(i);
-            View view2 = number.getChildAt(i);
             view1.setOnClickListener(clickListener);
+        }
+        for (int i = 0; i < number.getChildCount(); i++){
+            View view2 = number.getChildAt(i);
             view2.setOnClickListener(clickListener);
         }
 
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity //implements AdapterView.OnI
         @Override
         public void onClick(View v){
             p2.setText(v.getTag().toString());
-            if (Integer.parseInt(String.valueOf(p2)) == operation){
+            if (v.equals(operation)){
                 p1.setText(p2.getText());
                 n1 = Integer.parseInt(String.valueOf(p1));
                 p2.setText(n2);
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity //implements AdapterView.OnI
                         case sum:
                             results = n1 + n2;
                             break;
-                        case sub:
+                        case getTag:
                             results = n1 - n2;
                             break;
                         case mlp:
@@ -87,8 +91,11 @@ public class MainActivity extends AppCompatActivity //implements AdapterView.OnI
                         case div:
                             results = n1 / n2;
                             break;
+                        default:
+                            break;
                     }
                     break;
+                default: break;
             }
             p1.setText(result);
         }
